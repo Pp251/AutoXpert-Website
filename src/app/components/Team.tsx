@@ -1,27 +1,19 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
+import kamranImg from "../../imports/kamran.jpeg";
+import vigneshImg from "../../imports/vignesh.jpeg";
+import ibrahimImg from "../../imports/ibrahim.jpeg";
+import ziyaImg from "../../imports/ziya.jpeg";
+import sifatImg from "../../imports/sifat.jpeg";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
+
+
 const teamMembers = [
-  {
-    name: "Kamran Rahman",
-    image: "/src/imports/WhatsApp_Image_2026-04-13_at_4.13.39_PM.jpeg",
-  },
-  {
-    name: "Vignesh Vinod",
-    image: "/src/imports/WhatsApp_Image_2026-04-13_at_4.13.38_PM.jpeg",
-  },
-  {
-    name: "Ibrahim Mallick",
-    image: "/src/imports/WhatsApp_Image_2026-04-13_at_4.13.38_PM_(1).jpeg",
-  },
-  {
-    name: "Ziya Zanober",
-    image: "/src/imports/WhatsApp_Image_2026-04-13_at_6.05.19_PM.jpeg",
-  },
-  {
-    name: "Sifat Ahmad",
-    image: "/src/imports/WhatsApp_Image_2026-04-13_at_3.08.27_PM.jpeg",
-  },
+  { name: "Kamran Rahman", image: kamranImg },
+  { name: "Vignesh Vinod", image: vigneshImg },
+  { name: "Ibrahim Mallick", image: ibrahimImg },
+  { name: "Ziya Zanober", image: ziyaImg },
+  { name: "Sifat Ahmad", image: sifatImg },
 ];
 
 export function Team() {
@@ -65,13 +57,11 @@ export function Team() {
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 <div className="relative z-10">
-                  <div className="w-full h-[180px] sm:h-[200px] rounded-2xl overflow-hidden mb-4 bg-slate-800">
-                    <ImageWithFallback
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
 
                   <h3 className="text-center text-sm font-bold text-white group-hover:text-cyan-400 transition-colors">
                     {member.name}
