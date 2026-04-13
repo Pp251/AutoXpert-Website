@@ -1,5 +1,7 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Download, Rocket } from "lucide-react";
+import whatsappImg1 from "../../imports/WhatsApp_Image_2026-04-13_at_1.31.43_PM.jpeg";
+import whatsappImg2 from "../../imports/WhatsApp_Image_2026-04-13_at_1.31.46_PM.jpeg";
 import { Button, Logo } from "./UI";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
@@ -23,11 +25,11 @@ export function ShowcaseCTA() {
               transition={{ duration: 0.6 }}
               className="w-full max-w-[300px]"
             >
-              <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_0_60px_rgba(6,182,212,0.2)] border-8 border-slate-800">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] shadow-[0_0_60px_rgba(6,182,212,0.2)] border-8 border-slate-800">
                 <ImageWithFallback
-                  src="/src/imports/WhatsApp_Image_2026-04-13_at_1.31.43_PM.jpeg"
+                  src={whatsappImg1}
                   alt="Live Diagnostics Screen"
-                  className="w-full h-auto"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
             </motion.div>
@@ -38,11 +40,11 @@ export function ShowcaseCTA() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="w-full max-w-[300px]"
             >
-              <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_0_60px_rgba(6,182,212,0.2)] border-8 border-slate-800">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] shadow-[0_0_60px_rgba(6,182,212,0.2)] border-8 border-slate-800">
                 <ImageWithFallback
-                  src="/src/imports/WhatsApp_Image_2026-04-13_at_1.31.46_PM.jpeg"
+                  src={whatsappImg2}
                   alt="Nearby Garages Screen"
-                  className="w-full h-auto"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
             </motion.div>

@@ -56,12 +56,14 @@ export function Team() {
               <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-3xl p-5 hover:bg-white/[0.05] transition-all duration-300 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-                <div className="relative z-10">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover rounded-2xl"
-                  />
+                <div className="relative z-10 flex flex-col items-center gap-4">
+                  <div className="relative w-full aspect-[4/5] overflow-hidden rounded-3xl bg-slate-900">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
 
                   <h3 className="text-center text-sm font-bold text-white group-hover:text-cyan-400 transition-colors">
                     {member.name}
